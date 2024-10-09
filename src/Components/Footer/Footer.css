@@ -1,0 +1,17 @@
+.footer-container {
+  display: flex;
+  list-style: none;
+  width: 80%;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+.right {
+  display: flex;
+  gap: 20px;
+}
+.right li:hover {
+  color: #400090;
+  cursor: pointer;
+}

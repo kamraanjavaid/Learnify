@@ -1,0 +1,109 @@
+.nav-container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  line-height: 50px;
+}
+
+.nav-logo {
+  color: #400090;
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  font-size: 16px;
+  gap: 24px;
+}
+
+.loginBtn,
+.signUpBtn {
+  padding: 10px 18px;
+  border-radius: 20px;
+  border: none;
+  margin: 3px;
+}
+
+.login-signup-btn button {
+  color: #400090;
+  border: 1px solid #400090;
+  font-weight: 600;
+}
+
+.login-signup-btn button:hover {
+  color: white;
+  background-color: #400090;
+  border: 1px solid #400090;
+  cursor: pointer;
+}
+
+a {
+  color: black;
+}
+
+.nav-mob-open {
+  display: none;
+}
+
+.nav-mob-close {
+  width: 0.0000001px;
+}
+
+@media (max-width: 768px) {
+  .login-signup-btn {
+    display: none;
+  }
+
+  .nav-mob-open {
+    position: absolute;
+    right: 60px;
+    display: block;
+    cursor: pointer;
+    margin-top: 20px;
+    z-index: 1;
+    width: 40px;
+  }
+
+  .nav-mob-close {
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 240px;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .nav-list {
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    background-color: #f9f9f9;
+    width: 300px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.7s;
+    right: -350px;
+  }
+
+  .nav-list li {
+    font-size: 25px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+
+  .nav-list li:hover {
+    background-color: #666;
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .nav-mob-open {
+    right: 30px;
+  }
+}

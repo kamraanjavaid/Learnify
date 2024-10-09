@@ -1,0 +1,122 @@
+.courses-box {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 25px;
+}
+
+.courses-title {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 40px;
+}
+
+/* DSA course container and card */
+.dsa-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* Make it wrap automatically for smaller widths */
+}
+
+.dsa-course-card {
+  width: 210px;
+  transition: transform 0.3s ease; /* Animation on hover */
+}
+
+.dsa-course-card:hover {
+  cursor: pointer;
+}
+
+.dsa-course-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  border: 1.5px solid #400090;
+}
+
+.dsa-course-card img:hover {
+  opacity: 0.8;
+}
+
+.dsa-course-card p {
+  text-align: justify;
+  height: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  &:hover {
+    color: #400090;
+  }
+}
+
+.dsa-course-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.dsa-course-card button {
+  margin-top: 6px;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: 1px solid #400090;
+  color: #400090;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dsa-course-card button:hover {
+  background-color: #400090;
+  color: white;
+}
+
+.courses-hr {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+  border: 1px solid #400090;
+}
+
+@media (max-width: 768px) {
+  .dsa-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .dsa-course-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .dsa-course-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .courses-title p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dsa-container {
+    grid-template-columns: 1fr;
+  }
+
+  .dsa-course-card {
+    width: 100%;
+  }
+
+  .dsa-course-card img {
+    width: 100%;
+  }
+  .courses-box .courses-title h1 {
+    font-size: 30px;
+  }
+  .courses-title p {
+    text-align: right;
+    width: 100px;
+  }
+}

@@ -1,0 +1,178 @@
+.chatbox-container {
+  box-sizing: border-box;
+  width: 80%;
+  min-height: 90vh; /* Changed to take full available height */
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column; /* Added to allow flex alignment */
+  justify-content: space-between; /* Space between title/prompts and input box */
+}
+.chatbox-title h1 {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 40px;
+}
+.chatbox-title p {
+  font-size: 20px;
+  margin: auto;
+  width: 600px;
+  line-height: 1.5;
+  color: gray;
+  text-align: center;
+}
+.chatbox-prompts p {
+  border-radius: 50px;
+  background-color: #400090;
+  margin: 10px;
+  color: white;
+  line-height: 2.8;
+  padding: 6px 12px;
+  &:hover {
+    background-color: #f9f9f9;
+    cursor: pointer;
+    color: #400090;
+    border: 1px solid #400090;
+  }
+}
+.chatbox-welcome p {
+  text-align: center;
+  font-size: 30px;
+}
+.chatbox-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 10px;
+}
+.prompt-box {
+  width: 80%;
+  margin: auto;
+}
+.input-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.input-box input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  font-size: 16px;
+  height: 3rem;
+  color: gray;
+}
+.faPaperPlane {
+  color: #400090;
+  height: 2rem;
+  padding-left: 10px;
+  &:hover {
+    color: #900090;
+    cursor: pointer;
+  }
+}
+@media (max-width: 460px) {
+  .input-box {
+    width: 100%;
+  }
+  .input-box input {
+    width: 400px;
+  }
+  .chatbox-prompts p {
+    font-size: 12px;
+  }
+  .prompt-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .chatbox-title p {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .prompt-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .chatbox-prompts p {
+    margin: 0%;
+    margin-bottom: 10px;
+  }
+  .chatbox-title h1 {
+    font-size: 35px;
+  }
+}
+.result-box {
+  width: 70%;
+  margin: 0px auto;
+}
+.result-data {
+  padding: 0px 5%;
+  max-height: 70vh;
+  overflow-y: scroll;
+}
+.result-data::-webkit-scrollbar {
+  display: none;
+}
+.chatbox-question {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.input-img {
+  width: 40px;
+  border-radius: 50%;
+}
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 16px;
+}
+
+.loader div {
+  position: absolute;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #400090;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.loader div:nth-child(1) {
+  left: 8px;
+  animation: loaderAnimation 0.6s infinite;
+}
+.loader div:nth-child(2) {
+  left: 32px;
+  animation: loaderAnimation 0.6s infinite 0.2s;
+}
+.loader div:nth-child(3) {
+  left: 56px;
+  animation: loaderAnimation 0.6s infinite 0.4s;
+}
+
+@keyframes loaderAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 765px) {
+  .result-box {
+    margin-top: 2px;
+    width: 100%;
+    margin: 0px auto;
+  }
+  .chatbox-title h1 {
+    font-size: 35px;
+    margin-top: 0px;
+  }
+}

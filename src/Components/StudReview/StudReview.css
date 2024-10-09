@@ -1,0 +1,38 @@
+.review-container {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.review-title h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+.review-profile-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.review-profile-pic img {
+  padding: 2px;
+}
+
+.review-profile-pic .img1,
+.img2,
+.img3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.review-box {
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+.studReview-hr {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
